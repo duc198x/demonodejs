@@ -1,0 +1,22 @@
+{
+  "name": "demojavascript",
+  "version": "1.0.0",
+  "description": "Demo some features of JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duc198x/basicjavascript.git"
+  },
+  "keywords": [
+    "JavaScript"
+  ],
+  "author": "Ngo Trung Duc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/duc198x/basicjavascript/issues"
+  },
+  "homepage": "https://github.com/duc198x/basicjavascript#readme"
+}
