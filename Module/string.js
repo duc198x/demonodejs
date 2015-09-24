@@ -33,4 +33,4 @@ module.exports.longestWord = function(string) {
         }
     }
     console.log(max);
-}; 
+};
