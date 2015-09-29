@@ -1,0 +1,18 @@
+-- Function: log_name()
+
+-- DROP FUNCTION log_name();
+
+CREATE OR REPLACE FUNCTION log_name()
+  RETURNS trigger AS
+$BODY$ declare
+Begin
+	Insert into logs (old_MemberCode, old_Name, old_Address, old_PhoneNumber)
+	values (old.MemberCode, OLD.Name, old.Address, old.PhoneNumber);
+	Raise notice 'The name has been changed';
+	return new;
+End;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION log_name()
+  OWNER TO postgres;
