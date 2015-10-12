@@ -1,23 +1,23 @@
 'use strict';
 var fs = require('fs');
 
-var name = "index.html";
-
-var checkFile = function(dir, fileName) {
-    return fs.readdir(__dirname + '/' + dir, function(err, check) {
+var checkFile = function(fileName, dirName) {
+    return fs.readdir(dirName, function(err, check) {
         for (var i = 0; i < check.length; i++) {
             if (check[i] === fileName)
-                return console.log("This file existed in folder");
+                return console.log("This file has existed in current folder");
         }
-        return console.log("This file did not exist in folder");
+        return console.log("This file has not existed in current folder");
     });
 };
 
- checkFile('views', name);
+var processData = process.argv;
 
-//var processData = process.argv;
-//
-//var filename = processData[0];
-//var dirname = processData[1];
-//
-//console.log(filename, dirname);
+var filename = processData[2];
+var dirname = processData[3];
+
+//checkFile(name, __dirname);
+
+console.log(filename, dirname);
+
+checkFile(filename, dirname);   // De dong nay thi chay commandline se nhan nhung "run file" lai khong dc
